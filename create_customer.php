@@ -1,44 +1,43 @@
 <?php
 
 include("include/header.php");
-include("config.php");
+include("include/config.php");
 
 if(isset($_REQUEST['card_number'])){
-	//creating Token
+	//For creating token
 	try{
-		\Stripe\Stripe::setApiKey(
-			STRIPE_SECRET_KEY);
+		\Stripe\Stripe::setApiKey(STRIPE_SECRET_KEY);
 
-		$token=\Stripe\Token::create(array("card" => array(
-
-			"number" => $_REQUEST['card_number'],
-			"exp_month" => $_REQUEST['exp_month'],
-			"exp_year" => $_REQUEST['exp_year'],
-			"cvc" => $_REQUEST['cvc']
-			)
-		));
-		$token_id = $token->id;
+		$token=\Stripe\Token::create(array(
+			"card" => array(
+				"number" => $_REQUEST['card_number'],
+				"exp_month" => $_REQUEST['exp_month'],
+				"exp_year" => $_REQUEST['exp_year'],
+				"cvc" => $_REQUEST['cvv']
+				)
+			));
+		$token_id=$token->id;
 	}
 	catch(Exception $e) {
 		$_SESSION['error_msg'] = "Error :".$e->getMessage();
 	} 
 	if(!empty($token_id)){
-      	// For charge
+      	// For create customer
 		try{
+			
 
-
-			$charging=\Stripe\Charge::create(array(
-				"amount" => $_REQUEST['amount'],
-				"currency" => "usd",
-				"source" => $token_id, 
-				"description" => "Payment for testing"
-				));
-			$_SESSION['charging_id']=$charging->id;
+			$charging=\Stripe\Customer::create(array(
+				"description" => "create testing customer",
+  				"source" => $token_id // obtained with Stripe.js
+  				));
+			$_SESSION['customer_id']=$charging->id;
 		}
 		catch(Exception $e) {
 			$_SESSION['error_msg'] = "Error :".$e->getMessage();
 		} 
 	}
+	
+
 }
 ?>
 
@@ -48,15 +47,15 @@ if(isset($_REQUEST['card_number'])){
 	<form class="form-basic" method="post" action="">
 
 		<div class="form-title-row">
-			<h1>Payment form </h1>
+			<h1>Create Cusomer </h1>
 		</div>
 		<?php
 
-		$msg=$_SESSION['charging_id'];
+		$msg=$_SESSION['customer_id'];
 		$err=$_SESSION['error_msg'];
 		if(!empty($msg)){
-			echo "<p style='color:green;' >Amount Paid Successfully . Charge id ".$msg."</p></br>";
-			unset($_SESSION['charging_id']);
+			echo "<p style='color:green;' >Customer created Successfully . Customer id ".$msg."</p></br>";
+			unset($_SESSION['customer_id']);
 		}
 		if(!empty($err)){
 			echo "<p style='color:red;' >".$err."</p></br>";
@@ -97,12 +96,7 @@ if(isset($_REQUEST['card_number'])){
 			</label>
 		</div>
 
-		<div class="form-row">
-			<label>
-				<span>Amount</span>
-				<input type="text" name="amount" required>
-			</label>
-		</div>
+		
 
 		
 		<div class="form-row">

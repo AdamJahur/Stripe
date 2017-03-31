@@ -9,8 +9,8 @@
 
 	<title>Stripe</title>
 
-	<link rel="stylesheet" href="assets/assets/demo.css">
-	<link rel="stylesheet" href="assets/assets/form-basic.css">
+	<link rel="stylesheet" href="assets/demo.css">
+	<link rel="stylesheet" href="assets/form-basic.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
 	<script>
 	$(document).ready(function(){
