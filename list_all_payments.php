@@ -11,7 +11,7 @@ try{
 
 	$list_array=json_decode(json_encode($list), true);
 
-	
+
 }
 catch(Exception $e) {
 	$_SESSION['error_msg'] = "Error :".$e->getMessage();
@@ -19,3 +19,9 @@ catch(Exception $e) {
 
 
 ?>
+<style>
+.form-basic{
+
+max-width: 741px !important;
+}
+</style>
