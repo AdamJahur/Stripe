@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Stripe</title>
+	<title>Payment Gateway</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-basic.css">
@@ -33,16 +33,12 @@
 
 
 	<header>
-		<h1>Stripe Payment</h1>
+		<h1>Payment Gateway</h1>
     </header>
 
     <ul class="menu">
-        <li><a href="simple_checkout.php" >Simple checkout</a></li>
-        <li><a href="create_charge.php">Create Payment</a></li>
-        <li><a href="create_customer.php">Create customer</a></li>
-        <li><a href="stripe_account_balance.php">Stripe Account balance</a></li>
-        <li><a href="list_all_payments.php">List All payment</a></li>
-        <li><a href="list_all_customers.php">List All customers</a></li>
+        <li><a href="Company.php" >Company</a></li>
+        <li><a href="Customer.php">Customer</a></li>
     </ul>
     </body>
 
