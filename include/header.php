@@ -41,7 +41,7 @@
         <li><a href="create_charge.php">Create Payment</a></li>
         <li><a href="create_customer.php">Create customer</a></li>
         <li><a href="stripe_account_balance.php">Stripe Account balance</a></li>
-        <li><a href="list_all_payment.php">List All payment</a></li>
+        <li><a href="list_all_payments.php">List All payment</a></li>
         <li><a href="list_all_customers.php">List All customers</a></li>
     </ul>
     </body>
