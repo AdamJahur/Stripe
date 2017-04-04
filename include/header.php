@@ -40,7 +40,7 @@
         <li><a href="Company.php" >Company</a></li>
         <li><a href="Customer.php">Customer</a></li>
     </ul>
-    </body>
+
 
 
 
