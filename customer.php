@@ -124,7 +124,7 @@ if(isset($_REQUEST['card_number'])){
     <?php
 
                 if(!empty($_REQUEST)){
-            echo "<p style='color:green;' >Amount Paid Successfully . Token id ".$_REQUEST['stripeToken']."</p></br>";
+            echo "<p style='color:green;' >Amount Paid Successfully . Token id "."</p></br>";
             
         }
     ?>
@@ -153,7 +153,7 @@ if(isset($_REQUEST['card_number'])){
     <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
     <script
             src="https://cdn.datatables.net/1.10.12/js/dataTables.material.min.js"></script>
-<div class="main-content">
+
  <form class="form-basic" method="post" action="">
         <div id="account">
           <div class="form-title-row">
@@ -165,10 +165,10 @@ if(isset($_REQUEST['card_number'])){
 
         </div>
         </form>
-        </div>
+   
 
 
- <div class="main-content">
+
 
         <!-- You only need this form and the form-basic.css -->
 
@@ -179,8 +179,7 @@ if(isset($_REQUEST['card_number'])){
             </div>
     <?php
 
-    $msg=$_SESSION['customer_id'];
-    $err=$_SESSION['error_msg'];
+
     if(!empty($msg)){
         echo "<p style='color:green;' >Customer created Successfully . Customer id ".$msg."</p></br>";
         unset($_SESSION['customer_id']);
@@ -233,9 +232,9 @@ if(isset($_REQUEST['card_number'])){
 
         </form>
 
-    </div>
+ 
 
-    <div class="main-content">
+
 
         <!-- You only need this form and the form-basic.css -->
 
@@ -246,8 +245,7 @@ if(isset($_REQUEST['card_number'])){
             </div>
     <?php
 
-    $msg=$_SESSION['charging_id'];
-    $err=$_SESSION['error_msg'];
+ 
     if(!empty($msg)){
         echo "<p style='color:green;' >Amount Paid Successfully . Charge id ".$msg."</p></br>";
         unset($_SESSION['charging_id']);
@@ -306,7 +304,7 @@ if(isset($_REQUEST['card_number'])){
         </form>
 
     </div>
-    </div>
 
-    ?>
+
     </body>
+    </html>
