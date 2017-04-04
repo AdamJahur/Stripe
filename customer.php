@@ -90,24 +90,36 @@ if(isset($_REQUEST['card_number'])){
     #account {
         text-align: center;
     }
+
+    p {
+        font-weight: bolder;
+        font-size: 20px;
+    }
 </style>
-    <div class="main-content">
+       <div class="main-content">
 
-    <table>
+    <form class="form-basic" method="post" action="">
+     <div class="form-title-row">
+                <h1>Payment History </h1>
+            </div>
+    <?php
+        
+            echo "<table><tr>
+                    <th>Date</th>
+                    <th>Item</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                <td>12/21/2016</td>
+                <td>PS4 Game</td>
+                <td>$59.99</td>
+                </tr>";
+     
+            echo "</table>";
 
 
-        <tr>
-            <th>Date</th>
-            <th>Item</th>   
-            <th>Amount</th>
-            <th>Pay Now</th>
-        </tr>
-        <tr>
-            <td>01/20/2016</td>
-            <td>For Honor</td>
-            <td>59.00</td>
-            <td><form class="" method="post" action="">
-
+            
+        ?>
 
     <?php
 
@@ -116,34 +128,43 @@ if(isset($_REQUEST['card_number'])){
             
         }
     ?>
+
             <script
             src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            id="nick"
             data-key="<?php echo STRIPE_PUBLIC_KEY; ?>" 
-            data-amount="999"
+            data-amount="5999"
             data-name="Product name"
             data-description="Pay the amount for this product"
             data-image="assets/logo.png"
             data-locale="auto">
      </script>
-        </form>
-        </td>
-        </tr>
-</table>
+
+</form>
+
+
+
+
 
 </div>
+ 
 
     <script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
     <script src="//cdn.datatables.net/1.10.10/js/jquery.dataTables.min.js"></script>
     <script
             src="https://cdn.datatables.net/1.10.12/js/dataTables.material.min.js"></script>
+<div class="main-content">
+ <form class="form-basic" method="post" action="">
+        <div id="account">
+          <div class="form-title-row">
+          <h1>Account Balance</h1>
+        </div>
 
-
-        <div class="col-md-12" id="account">
-            <h3>Account Balance</h3>
-
-                <p>Avilable: $500</p>
+                <p>Available: $500</p>
                 <p>Pending: $1000</p>
 
+        </div>
+        </form>
         </div>
 
 
