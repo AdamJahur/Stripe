@@ -7,7 +7,7 @@
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<title>Payment Gateway</title>
+	<title>PalPay</title>
 
 	<link rel="stylesheet" href="assets/demo.css">
 	<link rel="stylesheet" href="assets/form-basic.css">
@@ -33,13 +33,10 @@
 
 
 	<header>
-		<h1>Payment Gateway</h1>
+		<h1>PalPay</h1>
     </header>
 
-    <ul class="menu">
-        <li><a href="Company.php" >Company</a></li>
-        <li><a href="Customer.php">Customer</a></li>
-    </ul>
+
 
 
 
