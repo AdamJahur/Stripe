@@ -74,7 +74,7 @@ max-width: 741px !important;
 			if(!empty($list_array['data'])){
 				foreach($list_array['data'] as $detail){
 				
-					echo "<tr><td>".$detail['id']."</td><td>".date("Y-m-d H-i-s",$detail['created'])."</td></tr>";	
+					echo "<tr><td>".$detail['id']."</td><td>".date_default_timezone_set('America/New_York').date("Y-m-d H-i-s",$detail['created'])."</td></tr>";	
 				}
 			}
 			else{
