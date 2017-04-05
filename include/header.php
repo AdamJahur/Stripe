@@ -33,7 +33,7 @@
 
 
 	<header>
-		<h1>PalPay</h1>
+		<a href="landing.php" id="pay"><h2>PalPay</h2></a>
     </header>
 
 
