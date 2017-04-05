@@ -23,6 +23,7 @@ header{
     padding: 25px 40px;
     background-color: #673AB7;
     overflow: hidden;
+
 }
 
 
@@ -30,6 +31,7 @@ header h1{
     float: left;
 	font: normal 24px/1.5 'Open Sans', sans-serif;
 	color: #fff;
+    
 }
 
 header a{

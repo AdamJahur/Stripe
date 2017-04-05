@@ -6,7 +6,7 @@ html{
 .form-basic{
     max-width: 640px;
     margin: 0 auto;
-    padding: 55px;
+    padding: 30px;
     box-sizing: border-box;
 
     background-color:  #ffffff;
@@ -23,7 +23,7 @@ html{
 
 .form-basic .form-title-row{
     text-align: center;
-    margin-bottom: 55px;
+    margin-bottom: 10px;
 }
 
 /* The form title */
@@ -94,6 +94,11 @@ html{
     vertical-align: top;
 }
 
+#pay {
+    float: left;
+    background-color: grey;
+}
+
 .form-basic .form-radio-buttons > div{
     margin-top: 10px;
 }
@@ -114,10 +119,9 @@ html{
     background-color:  #6caee0;
     color: #ffffff;
     font-weight: bold;
-    box-shadow: 1px 2px 4px 0;
     padding: 14px 22px;
     border: 0;
-    margin: 40px 220px ;
+    margin-left: 220px ;
 }
 
 /*	Making the form responsive. Remove this media query

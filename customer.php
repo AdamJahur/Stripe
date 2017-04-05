@@ -142,7 +142,87 @@ if(isset($_REQUEST['card_number'])){
 
 </form>
 
+ <form class="form-basic" method="post" action="">
+    <?php
+        
+            echo "<table><tr>
+                    <th>Date</th>
+                    <th>Item</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                <td>01/17/2016</td>
+                <td>PS4</td>
+                <td>$399.99</td>
+                </tr>";
+     
+            echo "</table>";
 
+
+            
+        ?>
+
+    <?php
+
+                if(!empty($_REQUEST)){
+            echo "<p style='color:green;' >Amount Paid Successfully . Token id "."</p></br>";
+            
+        }
+    ?>
+
+            <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            id="nick"
+            data-key="<?php echo STRIPE_PUBLIC_KEY; ?>" 
+            data-amount="39999"
+            data-name="Product name"
+            data-description="Pay the amount for this product"
+            data-image="assets/logo.png"
+            data-locale="auto">
+     </script>
+
+</form>
+
+    <form class="form-basic" method="post" action="">
+       <?php
+        
+            echo "<table><tr>
+                    <th>Date</th>
+                    <th>Item</th>
+                    <th>Amount</th>
+                </tr>
+                <tr>
+                <td>02/21/2016</td>
+                <td>Macbook Pro</td>
+                <td>$1799.99</td>
+                </tr>";
+     
+            echo "</table>";
+
+
+            
+        ?>
+
+    <?php
+
+                if(!empty($_REQUEST)){
+            echo "<p style='color:green;' >Amount Paid Successfully . Token id "."</p></br>";
+            
+        }
+    ?>
+
+            <script
+            src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+            id="nick"
+            data-key="<?php echo STRIPE_PUBLIC_KEY; ?>" 
+            data-amount="179999"
+            data-name="Product name"
+            data-description="Pay the amount for this product"
+            data-image="assets/logo.png"
+            data-locale="auto">
+     </script>
+
+</form>
 
 
 
