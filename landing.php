@@ -18,7 +18,7 @@ include("include/config.php");
 			<h1>Welcome!</h1>
 			<br>
 			<br>
-			<p>Title is a simple and easy way for customers to make payments and companies to get paid. Companies are able to track their customers payment histories and customers are able to see balances they owe as well as make whole payments on balances, see their account balance and pending charges as well as add new credit card information. </p>
+			<p>PalPay is a simple and easy way for customers to make payments and companies to get paid. Companies are able to track their customers payment histories and customers are able to see balances they owe as well as make whole payments on balances, see their account balance and pending charges as well as add new credit card information. </p>
 		</div>
 	</form>
 </div>
